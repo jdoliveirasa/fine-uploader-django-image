@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<br>
+<br>
+POST EXECUTADO COM SUCESSO! 
+<div>
+	<br>
+	<div>POST</div>
+	<br>
+	<div>{{ post.conteudo }}</div>
+	<br>
+</div>
+<br>
+{% if itens %}
+<div>
+	<ul>
+		{% for item in itens %}
+	    <li>
+	    	<img src="/media/{{ item.image_file }}" alt="Smiley face" height="100" width="100">
+	    </li>
+	    {% endfor %}
+	</ul>
+</div>
+{% endif %}
+{% endblock %}
